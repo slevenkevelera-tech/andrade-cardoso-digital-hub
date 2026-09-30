@@ -35,7 +35,7 @@ function AuthPage() {
     });
   }, [navigate]);
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>): Promise<void> {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = String(form.get("email"));
@@ -45,7 +45,7 @@ function AuthPage() {
     if (modo === "entrar") {
       const { error } = await supabase.auth.signInWithPassword({ email, password: senha });
       setCarregando(false);
-      if (error) return toast.error("E-mail ou senha inválidos.");
+      if (error) { toast.error("E-mail ou senha inválidos."); return; }
       navigate({ to: "/painel" });
       return;
     }
@@ -59,7 +59,7 @@ function AuthPage() {
       },
     });
     setCarregando(false);
-    if (error) return toast.error(error.message);
+    if (error) { toast.error(error.message); return; }
     if (!data.session) {
       toast.success("Conta criada. Confirme o e-mail para acessar o painel.");
       return;
