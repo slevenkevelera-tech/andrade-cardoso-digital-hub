@@ -14,16 +14,150 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      interacoes: {
+        Row: {
+          automatica: boolean
+          canal: Database["public"]["Enums"]["canal"]
+          conteudo: string
+          created_at: string
+          criado_por: string | null
+          id: string
+          lead_id: string
+        }
+        Insert: {
+          automatica?: boolean
+          canal?: Database["public"]["Enums"]["canal"]
+          conteudo: string
+          created_at?: string
+          criado_por?: string | null
+          id?: string
+          lead_id: string
+        }
+        Update: {
+          automatica?: boolean
+          canal?: Database["public"]["Enums"]["canal"]
+          conteudo?: string
+          created_at?: string
+          criado_por?: string | null
+          id?: string
+          lead_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "interacoes_lead_id_fkey"
+            columns: ["lead_id"]
+            isOneToOne: false
+            referencedRelation: "leads"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      leads: {
+        Row: {
+          area: string
+          created_at: string
+          email: string | null
+          id: string
+          mensagem: string | null
+          nome: string
+          origem: string
+          proximo_followup: string | null
+          status: Database["public"]["Enums"]["lead_status"]
+          telefone: string | null
+          updated_at: string
+          valor_estimado: number
+        }
+        Insert: {
+          area?: string
+          created_at?: string
+          email?: string | null
+          id?: string
+          mensagem?: string | null
+          nome: string
+          origem?: string
+          proximo_followup?: string | null
+          status?: Database["public"]["Enums"]["lead_status"]
+          telefone?: string | null
+          updated_at?: string
+          valor_estimado?: number
+        }
+        Update: {
+          area?: string
+          created_at?: string
+          email?: string | null
+          id?: string
+          mensagem?: string | null
+          nome?: string
+          origem?: string
+          proximo_followup?: string | null
+          status?: Database["public"]["Enums"]["lead_status"]
+          telefone?: string | null
+          updated_at?: string
+          valor_estimado?: number
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          id: string
+          nome: string | null
+        }
+        Insert: {
+          created_at?: string
+          id: string
+          nome?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          nome?: string | null
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "advogado"
+      canal: "email" | "whatsapp" | "telefone" | "reuniao" | "automacao"
+      lead_status:
+        | "contato"
+        | "qualificado"
+        | "proposta"
+        | "contrato"
+        | "perdido"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +284,16 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "advogado"],
+      canal: ["email", "whatsapp", "telefone", "reuniao", "automacao"],
+      lead_status: [
+        "contato",
+        "qualificado",
+        "proposta",
+        "contrato",
+        "perdido",
+      ],
+    },
   },
 } as const
