@@ -69,7 +69,7 @@ async function consultar(
       query,
       sort: [{ dataHoraUltimaAtualizacao: { order: "desc" } }],
     }),
-    signal: AbortSignal.timeout(45_000),
+    signal: AbortSignal.timeout(8_000),
   });
   if (!res.ok) throw new Error(`${base.sigla} ${res.status}`);
 
