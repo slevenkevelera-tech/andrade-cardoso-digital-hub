@@ -65,10 +65,11 @@ async function consultar(
     },
     body: JSON.stringify({
       size: 3,
+      track_total_hits: false,
       query,
       sort: [{ dataHoraUltimaAtualizacao: { order: "desc" } }],
     }),
-    signal: AbortSignal.timeout(20_000),
+    signal: AbortSignal.timeout(45_000),
   });
   if (!res.ok) throw new Error(`${base.sigla} ${res.status}`);
 

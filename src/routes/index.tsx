@@ -281,8 +281,8 @@ function Index() {
                 Atualizada em tempo real.
               </h2>
               <p className="mt-4 max-w-[38ch] text-sm leading-relaxed text-cream/55 text-pretty">
-                Consulta direta à rede nacional de documentação jurídica (LexML), que reúne
-                decisões do STF, STJ, TST e tribunais estaduais.
+                Consulta direta à base pública do Conselho Nacional de Justiça (DataJud), que reúne processos e
+                decisões do STJ, TST e do Tribunal de Justiça do Pará.
               </p>
             </div>
             <div className="col-span-12 lg:col-span-8">
