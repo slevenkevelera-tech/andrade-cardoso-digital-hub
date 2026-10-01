@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp, FaYoutube } from "react-icons/fa";
+
 import { FormContato } from "@/components/site/FormContato";
 import { Jurisprudencia } from "@/components/site/Jurisprudencia";
 import tribunal from "@/assets/tribunal.jpg";
@@ -27,19 +29,23 @@ export const Route = createFileRoute("/")({
 const AREAS = [
   {
     nome: "Direito Penal",
-    texto: "Defesa criminal, habeas corpus e execução penal com atuação em todas as instâncias.",
+    texto:
+      "Defesa criminal em todas as instâncias: audiências de custódia, habeas corpus, sanações e execução penal. Acompanhamos cada fase do processo com petições próprias e comunicação direta com você.",
   },
   {
     nome: "Direito Civil",
-    texto: "Contratos, responsabilidade civil e recuperação de créditos com foco em resultado.",
+    texto:
+      "Contratos, responsabilidade civil, cobranças e recuperação de créditos. Elaboramos e revisamos contratos, ajuizamos ações com estratégia calcada em jurisprudência atualizada e negociamos acordos que preservam seu caixa.",
   },
   {
     nome: "Direito Trabalhista",
-    texto: "Defesa de empresas e trabalhadores, acordos e ações coletivas.",
+    texto:
+      "Para empresas, defesa em reclamações, compliance trabalhista e consultoria preventiva. Para trabalhadores, verbas rescisórias, horas extras, assédio e reconhecimento de vínculo, com acordo apenas quando vale a pena.",
   },
   {
     nome: "Direito Empresarial",
-    texto: "Governança, societário e compliance para operações de médio e grande porte.",
+    texto:
+      "Sócios, contratos societários, governança e compliance para operações de médio e grande porte. Estruturamos negócios, prevenimos litígios e defendemos a empresa quando a briga é inevitável.",
   },
 ];
 
@@ -328,40 +334,40 @@ function Index() {
                 aria-label="Instagram"
                 className="grid size-10 place-items-center rounded-full glass text-cream/70 transition-colors hover:text-cream"
               >
-                IG
+                <FaInstagram className="size-[18px]" />
               </a>
               <a
                 href="https://linkedin.com"
                 aria-label="LinkedIn"
                 className="grid size-10 place-items-center rounded-full glass text-cream/70 transition-colors hover:text-cream"
               >
-                in
+                <FaLinkedinIn className="size-[18px]" />
               </a>
               <a
                 href="https://facebook.com"
                 aria-label="Facebook"
                 className="grid size-10 place-items-center rounded-full glass text-cream/70 transition-colors hover:text-cream"
               >
-                fb
+                <FaFacebookF className="size-[18px]" />
               </a>
               <a
                 href="https://youtube.com"
                 aria-label="YouTube"
                 className="grid size-10 place-items-center rounded-full glass text-cream/70 transition-colors hover:text-cream"
               >
-                YT
+                <FaYoutube className="size-[18px]" />
               </a>
               <a
                 href={WHATSAPP}
                 aria-label="WhatsApp"
                 className="grid size-10 place-items-center rounded-full bg-primary/15 text-brass-2 transition-colors hover:text-cream"
               >
-                WA
+                <FaWhatsapp className="size-[18px]" />
               </a>
             </div>
           </div>
-          <p className="mt-10 text-[11px] text-muted-foreground">
-            © 2026 Andrade Cardoso Advocacia. Conteúdo informativo, não constitui aconselhamento
+          <p className="mt-10 text-[13px] text-muted-foreground">
+            © 2026 Agência Loops Digital. Conteúdo informativo, não constitui aconselhamento
             jurídico.
           </p>
         </div>
