@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp, FaYoutube } from "react-icons/fa";
+
 import { FormContato } from "@/components/site/FormContato";
 import { Jurisprudencia } from "@/components/site/Jurisprudencia";
 import tribunal from "@/assets/tribunal.jpg";
