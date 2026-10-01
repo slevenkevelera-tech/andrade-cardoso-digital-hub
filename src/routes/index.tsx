@@ -5,8 +5,10 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp, FaYoutube } from "r
 import { FormContato } from "@/components/site/FormContato";
 import { Jurisprudencia } from "@/components/site/Jurisprudencia";
 import tribunal from "@/assets/tribunal.jpg";
-import socioMaurilo from "@/assets/socio-maurilo.jpg";
-import socioLorenzo from "@/assets/socio-lorenzo.jpg";
+import mauriloAsset from "@/assets/maurilo.jpg.asset.json";
+const socioMaurilo = mauriloAsset.url;
+import lorenzoAsset from "@/assets/lorenzo.png.asset.json";
+const socioLorenzo = lorenzoAsset.url;
 
 const TITULO = "Andrade Cardoso Advocacia — Defesa técnica em Cametá e Belém";
 const DESCRICAO =
@@ -220,7 +222,7 @@ function Index() {
                   loading="lazy"
                   width={816}
                   height={816}
-                  className="size-20 shrink-0 rounded-xl object-cover"
+                  className="size-20 shrink-0 rounded-xl object-cover object-top"
                 />
                 <div>
                   <h3 className="font-serif text-2xl font-semibold tracking-tight">
@@ -250,7 +252,7 @@ function Index() {
                   loading="lazy"
                   width={816}
                   height={816}
-                  className="size-20 shrink-0 rounded-xl object-cover"
+                  className="size-20 shrink-0 rounded-xl object-cover object-top"
                 />
                 <div>
                   <h3 className="font-serif text-2xl font-semibold tracking-tight">
