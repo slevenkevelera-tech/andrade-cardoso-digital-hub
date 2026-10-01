@@ -334,35 +334,35 @@ function Index() {
                 aria-label="Instagram"
                 className="grid size-10 place-items-center rounded-full glass text-cream/70 transition-colors hover:text-cream"
               >
-                IG
+                <FaInstagram className="size-[18px]" />
               </a>
               <a
                 href="https://linkedin.com"
                 aria-label="LinkedIn"
                 className="grid size-10 place-items-center rounded-full glass text-cream/70 transition-colors hover:text-cream"
               >
-                in
+                <FaLinkedinIn className="size-[18px]" />
               </a>
               <a
                 href="https://facebook.com"
                 aria-label="Facebook"
                 className="grid size-10 place-items-center rounded-full glass text-cream/70 transition-colors hover:text-cream"
               >
-                fb
+                <FaFacebookF className="size-[18px]" />
               </a>
               <a
                 href="https://youtube.com"
                 aria-label="YouTube"
                 className="grid size-10 place-items-center rounded-full glass text-cream/70 transition-colors hover:text-cream"
               >
-                YT
+                <FaYoutube className="size-[18px]" />
               </a>
               <a
                 href={WHATSAPP}
                 aria-label="WhatsApp"
                 className="grid size-10 place-items-center rounded-full bg-primary/15 text-brass-2 transition-colors hover:text-cream"
               >
-                WA
+                <FaWhatsapp className="size-[18px]" />
               </a>
             </div>
           </div>
