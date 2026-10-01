@@ -366,8 +366,8 @@ function Index() {
               </a>
             </div>
           </div>
-          <p className="mt-10 text-[11px] text-muted-foreground">
-            © 2026 Andrade Cardoso Advocacia. Conteúdo informativo, não constitui aconselhamento
+          <p className="mt-10 text-[13px] text-muted-foreground">
+            © 2026 Agência Loops Digital. Conteúdo informativo, não constitui aconselhamento
             jurídico.
           </p>
         </div>
