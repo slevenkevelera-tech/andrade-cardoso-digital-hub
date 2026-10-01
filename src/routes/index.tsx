@@ -27,19 +27,23 @@ export const Route = createFileRoute("/")({
 const AREAS = [
   {
     nome: "Direito Penal",
-    texto: "Defesa criminal, habeas corpus e execução penal com atuação em todas as instâncias.",
+    texto:
+      "Defesa criminal em todas as instâncias: audiências de custódia, habeas corpus, sanações e execução penal. Acompanhamos cada fase do processo com petições próprias e comunicação direta com você.",
   },
   {
     nome: "Direito Civil",
-    texto: "Contratos, responsabilidade civil e recuperação de créditos com foco em resultado.",
+    texto:
+      "Contratos, responsabilidade civil, cobranças e recuperação de créditos. Elaboramos e revisamos contratos, ajuizamos ações com estratégia calcada em jurisprudência atualizada e negociamos acordos que preservam seu caixa.",
   },
   {
     nome: "Direito Trabalhista",
-    texto: "Defesa de empresas e trabalhadores, acordos e ações coletivas.",
+    texto:
+      "Para empresas, defesa em reclamações, compliance trabalhista e consultoria preventiva. Para trabalhadores, verbas rescisórias, horas extras, assédio e reconhecimento de vínculo, com acordo apenas quando vale a pena.",
   },
   {
     nome: "Direito Empresarial",
-    texto: "Governança, societário e compliance para operações de médio e grande porte.",
+    texto:
+      "Sócios, contratos societários, governança e compliance para operações de médio e grande porte. Estruturamos negócios, prevenimos litígios e defendemos a empresa quando a briga é inevitável.",
   },
 ];
 
